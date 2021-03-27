@@ -37,4 +37,15 @@ extension UIButton {
         self.init(type: .system)
         self.setTitle(title, for: .normal)
     }
+    
+    func creatShadow(){
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.4
+        layer.shadowOffset = .init(width: 0, height: 10)
+        layer.shadowRadius = 5
+        
+        layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+        layer.shouldRasterize = true
+        layer.rasterizationScale = UIScreen.main.scale
+    }
 }

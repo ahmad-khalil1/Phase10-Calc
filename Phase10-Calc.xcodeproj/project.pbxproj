@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,9 @@
 		1363D87B24DF60BC006F9FE3 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1363D87A24DF60BC006F9FE3 /* VerticalStackView.swift */; };
 		1363D88324DF73F8006F9FE3 /* lucidagrande.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1363D88024DF7190006F9FE3 /* lucidagrande.ttf */; };
 		1363D88424DF73F8006F9FE3 /* lucidagrandebold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1363D87F24DF7190006F9FE3 /* lucidagrandebold.ttf */; };
+		13680E5524ED12900038DEC9 /* EditingPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13680E5424ED12900038DEC9 /* EditingPopUpVC.swift */; };
+		1389FC9B24E87A0F00A5A625 /* RoundFinishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1389FC9A24E87A0F00A5A625 /* RoundFinishVC.swift */; };
+		1389FC9D24E87A3600A5A625 /* ModallyPresentedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1389FC9C24E87A3600A5A625 /* ModallyPresentedVC.swift */; };
 		138B2B4E24D8DBFD00273F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B2B4D24D8DBFD00273F38 /* AppDelegate.swift */; };
 		138B2B5024D8DBFD00273F38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B2B4F24D8DBFD00273F38 /* SceneDelegate.swift */; };
 		138B2B5224D8DBFD00273F38 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B2B5124D8DBFD00273F38 /* MainViewController.swift */; };
@@ -25,6 +28,8 @@
 		13AE2AB524D9DD7600E06B0B /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE2AB224D9DD7600E06B0B /* UIView+Layout.swift */; };
 		13AE2AB624D9DD7600E06B0B /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE2AB324D9DD7600E06B0B /* Extentions.swift */; };
 		13AE2AB724D9DD7600E06B0B /* AnchoredConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE2AB424D9DD7600E06B0B /* AnchoredConstraints.swift */; };
+		13BF1A7024EDAB6D00614A0D /* popupWindowView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13BF1A6F24EDAB6D00614A0D /* popupWindowView.storyboard */; };
+		64DBFA7A3C4C5847342A59F9 /* Pods_Phase10_Calc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DC5CE575CEBF1981F5BC72 /* Pods_Phase10_Calc.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,9 @@
 		1363D87E24DF7169006F9FE3 /* hiragino-mincho-pron-w3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hiragino-mincho-pron-w3.otf"; sourceTree = "<group>"; };
 		1363D87F24DF7190006F9FE3 /* lucidagrandebold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lucidagrandebold.ttf; sourceTree = "<group>"; };
 		1363D88024DF7190006F9FE3 /* lucidagrande.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lucidagrande.ttf; sourceTree = "<group>"; };
+		13680E5424ED12900038DEC9 /* EditingPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingPopUpVC.swift; sourceTree = "<group>"; };
+		1389FC9A24E87A0F00A5A625 /* RoundFinishVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundFinishVC.swift; sourceTree = "<group>"; };
+		1389FC9C24E87A3600A5A625 /* ModallyPresentedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModallyPresentedVC.swift; sourceTree = "<group>"; };
 		138B2B4A24D8DBFD00273F38 /* Phase10-Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Phase10-Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		138B2B4D24D8DBFD00273F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		138B2B4F24D8DBFD00273F38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +58,10 @@
 		13AE2AB224D9DD7600E06B0B /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		13AE2AB324D9DD7600E06B0B /* Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		13AE2AB424D9DD7600E06B0B /* AnchoredConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchoredConstraints.swift; sourceTree = "<group>"; };
+		13BF1A6F24EDAB6D00614A0D /* popupWindowView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = popupWindowView.storyboard; sourceTree = "<group>"; };
+		B9DC5CE575CEBF1981F5BC72 /* Pods_Phase10_Calc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phase10_Calc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D29A76CDEEF37DE9A4158466 /* Pods-Phase10-Calc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phase10-Calc.debug.xcconfig"; path = "Target Support Files/Pods-Phase10-Calc/Pods-Phase10-Calc.debug.xcconfig"; sourceTree = "<group>"; };
+		F1563FF4224C18CA77AF7A4A /* Pods-Phase10-Calc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phase10-Calc.release.xcconfig"; path = "Target Support Files/Pods-Phase10-Calc/Pods-Phase10-Calc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64DBFA7A3C4C5847342A59F9 /* Pods_Phase10_Calc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +92,8 @@
 			children = (
 				138B2B4C24D8DBFD00273F38 /* Phase10-Calc */,
 				138B2B4B24D8DBFD00273F38 /* Products */,
+				575AA2FC70C8FEFD0890716C /* Pods */,
+				4BD6044011BFD92F3A21C0B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +138,7 @@
 				138B2B6124D8E15000273F38 /* playerCVC.swift */,
 				13AE2AB024D9DCCC00E06B0B /* EmojeCVC.swift */,
 				1394C79824E0E21200D15130 /* SectionHeaderReusableView.swift */,
+				13BF1A6F24EDAB6D00614A0D /* popupWindowView.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -132,6 +148,9 @@
 			children = (
 				138B2B5124D8DBFD00273F38 /* MainViewController.swift */,
 				1394C79A24E1AB6500D15130 /* AddPlayerVC.swift */,
+				1389FC9A24E87A0F00A5A625 /* RoundFinishVC.swift */,
+				1389FC9C24E87A3600A5A625 /* ModallyPresentedVC.swift */,
+				13680E5424ED12900038DEC9 /* EditingPopUpVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -147,6 +166,23 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		4BD6044011BFD92F3A21C0B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9DC5CE575CEBF1981F5BC72 /* Pods_Phase10_Calc.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		575AA2FC70C8FEFD0890716C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D29A76CDEEF37DE9A4158466 /* Pods-Phase10-Calc.debug.xcconfig */,
+				F1563FF4224C18CA77AF7A4A /* Pods-Phase10-Calc.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 138B2B5E24D8DBFF00273F38 /* Build configuration list for PBXNativeTarget "Phase10-Calc" */;
 			buildPhases = (
+				12FA436B3E2E98C2555AC3DF /* [CP] Check Pods Manifest.lock */,
 				138B2B4624D8DBFD00273F38 /* Sources */,
 				138B2B4724D8DBFD00273F38 /* Frameworks */,
 				138B2B4824D8DBFD00273F38 /* Resources */,
+				95358817D9C4263F536326DF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,11 +246,54 @@
 				1363D88324DF73F8006F9FE3 /* lucidagrande.ttf in Resources */,
 				1363D88424DF73F8006F9FE3 /* lucidagrandebold.ttf in Resources */,
 				138B2B5A24D8DBFF00273F38 /* LaunchScreen.storyboard in Resources */,
+				13BF1A7024EDAB6D00614A0D /* popupWindowView.storyboard in Resources */,
 				138B2B5724D8DBFF00273F38 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12FA436B3E2E98C2555AC3DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Phase10-Calc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95358817D9C4263F536326DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Phase10-Calc/Pods-Phase10-Calc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Phase10-Calc/Pods-Phase10-Calc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Phase10-Calc/Pods-Phase10-Calc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		138B2B4624D8DBFD00273F38 /* Sources */ = {
@@ -221,11 +302,14 @@
 			files = (
 				13066B1124DA1B48009136B7 /* EmojeItem.swift in Sources */,
 				1363D87B24DF60BC006F9FE3 /* VerticalStackView.swift in Sources */,
+				13680E5524ED12900038DEC9 /* EditingPopUpVC.swift in Sources */,
 				13066B0F24DA1A66009136B7 /* Item.swift in Sources */,
+				1389FC9B24E87A0F00A5A625 /* RoundFinishVC.swift in Sources */,
 				138B2B5224D8DBFD00273F38 /* MainViewController.swift in Sources */,
 				13AE2AB124D9DCCC00E06B0B /* EmojeCVC.swift in Sources */,
 				138B2B4E24D8DBFD00273F38 /* AppDelegate.swift in Sources */,
 				138B2B6424D8E49400273F38 /* PlayerItem.swift in Sources */,
+				1389FC9D24E87A3600A5A625 /* ModallyPresentedVC.swift in Sources */,
 				13AE2AB724D9DD7600E06B0B /* AnchoredConstraints.swift in Sources */,
 				13AE2AB624D9DD7600E06B0B /* Extentions.swift in Sources */,
 				138B2B5024D8DBFD00273F38 /* SceneDelegate.swift in Sources */,
@@ -366,6 +450,7 @@
 		};
 		138B2B5F24D8DBFF00273F38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D29A76CDEEF37DE9A4158466 /* Pods-Phase10-Calc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -384,6 +469,7 @@
 		};
 		138B2B6024D8DBFF00273F38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1563FF4224C18CA77AF7A4A /* Pods-Phase10-Calc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

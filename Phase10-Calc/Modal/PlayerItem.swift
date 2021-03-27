@@ -9,17 +9,22 @@
 import Foundation
 import UIKit
 
-class PlayerItem : Item {
+class PlayerItem : Item , NSCopying {
+    func copy(with zone: NSZone? = nil) -> Any {
+        let player = PlayerItem(name: name, rank: rank, phase: phase, pionts: pionts , image: image)
+        return player
+    }
+    
 //    private let identifier = UUID()
     
     var name : String
-    var rank : Int
+    var rank : Int?
     var phase : Int
     var pionts : Int
-    var sets : String
+    var sets : String?
     var image : UIImage?
     
-    init(name : String , rank : Int , phase : Int , pionts : Int , sets : String , image : UIImage? = nil){
+    init(name : String , rank : Int? = nil , phase : Int , pionts : Int , sets : String? = nil , image : UIImage? = nil){
         self.name = name
         self.rank = rank
         self.phase = phase

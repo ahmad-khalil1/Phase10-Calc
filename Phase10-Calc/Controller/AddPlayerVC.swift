@@ -12,7 +12,7 @@ protocol addPlayerDelegate {
     func didEndChosingPlayerName(name : String , photo : UIImage)
 }
 
-class AddPlayerVC: UIViewController {
+class AddPlayerVC: ModallyPresentedVC {
 
     var delegate : addPlayerDelegate!
     
@@ -20,24 +20,24 @@ class AddPlayerVC: UIViewController {
     
     let playerAvatarPhoto = UIImageView(cornerRadius: 0, image: UIImage(named: "big-man-\(Int.random(in: 0...4))"))
     
-    let cancelButton : UIButton = {
-        let button = UIButton(type: .roundedRect)
-        button.setTitle("Cancel", for: .normal)
-//        button.backgroundColor = #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1)
-        button.titleLabel?.font = .boldSystemFont(ofSize: 20)
-        button.tintColor =  #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1)
-        return button
-    }()
-    
-    
-    let doneButton : UIButton = {
-        let button =  UIButton(title: "Done")
-//        button.backgroundColor = #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1)
-        button.tintColor =   #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1)
-        button.titleLabel?.font = .boldSystemFont(ofSize: 20)
-        button.isEnabled = false
-        return button
-    }()
+//    let cancelButton : UIButton = {
+//        let button = UIButton(type: .roundedRect)
+//        button.setTitle("Cancel", for: .normal)
+////        button.backgroundColor = #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1)
+//        button.titleLabel?.font = .boldSystemFont(ofSize: 20)
+//        button.tintColor =  #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1)
+//        return button
+//    }()
+//
+//
+//    let doneButton : UIButton = {
+//        let button =  UIButton(title: "Done")
+////        button.backgroundColor = #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1)
+//        button.tintColor =   #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1)
+//        button.titleLabel?.font = .boldSystemFont(ofSize: 20)
+//        button.isEnabled = false
+//        return button
+//    }()
     
     var textField : UITextField = {
         let field = UITextField()
@@ -55,24 +55,24 @@ class AddPlayerVC: UIViewController {
     }()
     
     
-    fileprivate func addViewstoTheMainView(_ vertiaclStack: VerticalStackView, _ buttonsHorizantalStackView: UIStackView) {
+    fileprivate func addViewstoTheMainView(_ vertiaclStack: VerticalStackView) {
         view.addSubview(vertiaclStack)
-        view.addSubview(buttonsHorizantalStackView)
+//        view.addSubview(buttonsHorizantalStackView)
         //        view.addSubview(cancelButton)
         //        view.addSubview(doneButton)
     }
     
-    fileprivate func setupConstrains(_ vertiaclStack: VerticalStackView, _ buttonsHorizantalStackView: UIStackView) {
+    fileprivate func setupConstrains(_ vertiaclStack: VerticalStackView) {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         textField.translatesAutoresizingMaskIntoConstraints = false
         playerAvatarPhoto.translatesAutoresizingMaskIntoConstraints = false
         vertiaclStack.translatesAutoresizingMaskIntoConstraints = false
-        buttonsHorizantalStackView.translatesAutoresizingMaskIntoConstraints = false
+//        buttonsHorizantalStackView.translatesAutoresizingMaskIntoConstraints = false
         
         playerAvatarPhoto.constrainWidth(constant: 183)
         playerAvatarPhoto.constrainHeight(constant: 183)
         
-        buttonsHorizantalStackView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor , padding: .init(top: 5, left: 10, bottom: 0, right: 10 ))
+//        buttonsHorizantalStackView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor , padding: .init(top: 5, left: 10, bottom: 0, right: 10 ))
         vertiaclStack.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 100, left: 0, bottom: 100, right: 0)  )
     }
     
@@ -80,23 +80,23 @@ class AddPlayerVC: UIViewController {
         let vertiaclStack = VerticalStackView(arrangedSubViewsArray: [playerAvatarPhoto , textField , UIView()], spacing: 40)
         vertiaclStack.alignment = .center
         
-        let buttonsHorizantalStackView = UIStackView(arrangedSubviews: [cancelButton , UIView() , doneButton ])
-        buttonsHorizantalStackView.axis = .horizontal
-        buttonsHorizantalStackView.alignment = .center
-        buttonsHorizantalStackView.spacing = 20
+//        let buttonsHorizantalStackView = UIStackView(arrangedSubviews: [cancelButton , UIView() , doneButton ])
+//        buttonsHorizantalStackView.axis = .horizontal
+//        buttonsHorizantalStackView.alignment = .center
+//        buttonsHorizantalStackView.spacing = 20
         
         playerAvatarPhoto.contentMode = .scaleAspectFit
         
         view.backgroundColor = #colorLiteral(red: 0.2941176471, green: 0.3647058824, blue: 0.4039215686, alpha: 1)
         
-        addViewstoTheMainView(vertiaclStack, buttonsHorizantalStackView)
-        setupConstrains(vertiaclStack, buttonsHorizantalStackView)
+        addViewstoTheMainView(vertiaclStack)
+        setupConstrains(vertiaclStack)
     }
     
-    @objc func cancelButtonDidTaped(button : UIButton ){
-        self.dismiss(animated: true)
-    }
-    @objc func doneButtonDidTaped(button : UIButton ){
+//    @objc func cancelButtonDidTaped(button : UIButton ){
+//        self.dismiss(animated: true)
+//    }
+    @objc override func doneButtonDidTaped(button : UIButton ){
         if let name = textField.text , let image = playerAvatarPhoto.image {
             delegate.didEndChosingPlayerName( name: name , photo: image)
         }
@@ -114,8 +114,8 @@ class AddPlayerVC: UIViewController {
         
         textField.delegate = self
         
-        cancelButton.addTarget(self, action: #selector(cancelButtonDidTaped), for: .touchUpInside)
-        doneButton.addTarget(self, action: #selector(doneButtonDidTaped), for: .touchUpInside)
+//        cancelButton.addTarget(self, action: #selector(cancelButtonDidTaped), for: .touchUpInside)
+//        doneButton.addTarget(self, action: #selector(doneButtonDidTaped), for: .touchUpInside)
         
     }
     @objc func dismissKeyboard() {

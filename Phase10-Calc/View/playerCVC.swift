@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class playerCVC: UICollectionViewCell {
+class playerCVC: SwipeCollectionViewCell {
     static let reuseIdentifier = "player-collectionView-cell-reuse-identifier"
     
     fileprivate func makeShadow() {
@@ -35,9 +36,25 @@ class playerCVC: UICollectionViewCell {
     
     let setsLabel = UILabel(text:"One set of 4 + one run of 4", font: UIFont(name: "HiraMinProN-W3", size: 12) ?? UIFont.systemFont(ofSize: 1), numberOfLines: 2, fontcolor: #colorLiteral(red: 0.2196078431, green: 0.2431372549, blue: 0.337254902, alpha: 1))
     
-    let rankingLabel = UILabel(text: "1 \n Ranking ", font: UIFont(name: "LucidaGrande-Bold", size: 18) ?? UIFont.systemFont(ofSize: 1), numberOfLines: 2, fontcolor: #colorLiteral(red: 0.2196078431, green: 0.2431372549, blue: 0.337254902, alpha: 1))
+    let rankingLabel = UILabel(text: "1 \n Ranking ", font: UIFont(name: "LucidaGrande-Bold", size: 17) ?? UIFont.systemFont(ofSize: 1), numberOfLines: 2, fontcolor: #colorLiteral(red: 0.2196078431, green: 0.2431372549, blue: 0.337254902, alpha: 1))
     
+    let colorView = UIView()
     
+    var isDragging : Bool?  {
+        didSet{
+            if let isDragging = isDragging {
+                
+                if isDragging {
+//                    clipsToBounds = false
+                    colorView.backgroundColor = #colorLiteral(red: 1, green: 0.2299106419, blue: 0.1861539483, alpha: 1)
+                }else{
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                        self.colorView.backgroundColor = .clear
+                    }
+                }
+            }
+        }
+    }
     
    
     
@@ -46,14 +63,28 @@ class playerCVC: UICollectionViewCell {
             configureView()
         }
     }
-
+    
+//    let wrapperView : UIView = {
+//        let view = UIView()
+//        view.backgroundColor = #colorLiteral(red: 0.04087775201, green: 0.120924212, blue: 0.2315217853, alpha: 1)
+//        view.translatesAutoresizingMaskIntoConstraints  = false
+//
+//        return view
+//    }()
+    
     
 
     fileprivate func configureView() {
         self.layer.cornerRadius = 18
+        
+        self.swipeOffset = 100
         makeShadow()
-        //        clipsToBounds = true
-        backgroundColor = #colorLiteral(red: 0.831372549, green: 0.7098039216, blue: 0.6901960784, alpha: 1)
+        
+//                clipsToBounds = true
+        self.colorView.backgroundColor = .clear
+        
+        //#colorLiteral(red: 0.831372549, green: 0.7098039216, blue: 0.6901960784, alpha: 1)
+        
             //#colorLiteral(red: 0.5254901961, green: 0.4588235294, blue: 0.662745098, alpha: 1) موف
             //#colorLiteral(red: 1, green: 0.8352941176, blue: 0.8039215686, alpha: 1) جبيلي
             //#colorLiteral(red: 0.6901960784, green: 0.7921568627, blue: 0.7803921569, alpha: 1) whit green
@@ -65,7 +96,7 @@ class playerCVC: UICollectionViewCell {
         playerAvatarPhoto.constrainHeight(constant: 75)
         
         
-        let fontColor  = #colorLiteral(red: 0.2196078431, green: 0.2431372549, blue: 0.337254902, alpha: 1)
+//        let fontColor  = #colorLiteral(red: 0.2196078431, green: 0.2431372549, blue: 0.337254902, alpha: 1)
         var randomNum = Int.random(in: 0...4)
      
         playerNameLabel.textAlignment = .center
@@ -94,8 +125,31 @@ class playerCVC: UICollectionViewCell {
         horizontalStack.spacing = 32
         horizontalStack.axis = .horizontal
         horizontalStack.alignment = .center
-        self.contentView.addSubview(horizontalStack)
+        
+      
+        let customView : UIView = {
+            let view = UIView()
+            view.backgroundColor = #colorLiteral(red: 0.831372549, green: 0.7098039216, blue: 0.6901960784, alpha: 1)
+            view.layer.cornerRadius =   18
+            view.translatesAutoresizingMaskIntoConstraints  = false
+            
+            return view
+        }()
+        
+//        self.contentView.addSubview(horizontalStack)
+        contentView.addSubview(colorView)
+        self.contentView.addSubview(customView)
+//        self.contentView.addSubview(wrapperView)
+        
+//        wrapperView.addSubview(customView)
+        customView.addSubview(horizontalStack)
+        customView.fillSuperView()
+//        wrapperView.fillSuperView()
         horizontalStack.fillSuperviewWithPadding(padding: .init(top: 0, left: 17, bottom: 0 , right: 17))
+        colorView.translatesAutoresizingMaskIntoConstraints = false
+        colorView.anchor(top: contentView.topAnchor, leading: nil , bottom: contentView.bottomAnchor, trailing: contentView.trailingAnchor)
+        colorView.constrainWidth(constant: 300 )
+//        horizontalStack.fillSuperviewWithPadding(padding: .init(top: 0, left: 17, bottom: 0 , right: 17))
 
     }
     
